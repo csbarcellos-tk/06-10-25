@@ -1,9 +1,6 @@
 package com.example.__10_25.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,14 +15,24 @@ import java.util.UUID;
 
 public class Endereco {
     @Id @GeneratedValue
-
     private UUID id;
 
+@Column(nullable = false)
     private String rua;
+
+@Column(nullable = false)
     private String cidade;
+
+@Column(nullable = false)
     private String uf;
+
+@Column(nullable = false)
     private String cep;
+
+@Column(nullable = false)
     private String numero;
+
+@Column(nullable = false)
     private String logradouro;
 
     public Endereco(String rua, String cidade, String uf, String cep, String numero, String logradouro) {

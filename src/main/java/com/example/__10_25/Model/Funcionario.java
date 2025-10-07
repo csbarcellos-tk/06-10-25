@@ -15,7 +15,7 @@ import java.util.UUID;
 public class Funcionario {
     @Id @GeneratedValue
 
-    private UUID id;
+    private UUID id; // Alterado para UUID
 
     @Column(nullable = false)
     private String nome;
